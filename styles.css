@@ -4,6 +4,10 @@ body {
 
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 150px);
+}
+
+.square {
+    height: 150px;
 }
 
