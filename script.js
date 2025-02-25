@@ -44,4 +44,9 @@ function checkResult() {
             return;
         }
     }
+
+    if(!gameBoard.includes("")) {
+        gameActive = false;
+        document.getElementById("message").textContent = "its a draw";
+    }
 }
