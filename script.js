@@ -10,13 +10,26 @@ const winningPositions = [
     [3, 4, 5],
     [6, 7, 8],
     [0, 3, 6],
-    [6, 7, 8],
+    [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-    
 ]
 
 function clickSquare(event) {
-    clickedSquare = clickedSquareEvent.target
+    clickedSquare = clickedSquareEvent.target //or event.target
+    // //const index = event.target.dataset.index;
+    const clickedSquareIndex = Number.parseInt(clickedCell.getAttribute("data-index"))
+
+    if (gameBoard[clickedSquareIndex] !== "" || !gameActive){
+        return; 
+    }
+
+    gameBoard[clickedSquareIndex] = currentPlayer
+    clickedSquare.textContent = currentPlayer
+    clickedSquare.setAttribute("aria-label", 'Cell ${clickedSquareIndex + 1}, ${currentPlayer}');
+
+    checkResult()
+
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
