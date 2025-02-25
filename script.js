@@ -66,9 +66,9 @@ document.querySelectorAll(".square").forEach(square => {
 
 //reset button
 resetButton.addEventListener("click", () => {
-    let currentPlayer = "X"
-    let gameBoard = ["", "", "", "", "", "", "", "", ""]
-    let gameActive = true
+    currentPlayer = "X"
+    gameBoard = ["", "", "", "", "", "", "", "", ""]
+    gameActive = true
 
     document.querySelectorAll(".square").forEach(square => {
         square.textContent = "";
