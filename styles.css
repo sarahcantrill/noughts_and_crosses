@@ -16,6 +16,8 @@ body {
 .square {
     height: 150px;
     border-radius: 10px;
+    font-size: 100px;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
 .square:hover {
