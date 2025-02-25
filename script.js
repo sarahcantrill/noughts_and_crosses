@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const board = document.getElementById("board")
 const resetButton = document.getElementById("reset-btn")
 
@@ -17,7 +18,7 @@ const winningPositions = [
 ]
 
 function clickSquare(event) {
-    clickedSquare = event.target //or event.target
+    let clickedSquare = event.target //or event.target
     // //const index = event.target.dataset.index;
     const clickedSquareIndex = Number.parseInt(clickedSquare.getAttribute("data-index"))
 
@@ -54,3 +55,5 @@ function checkResult() {
 document.querySelectorAll(".square").forEach(square => {
     square.addEventListener("click", clickSquare);
 })
+
+});
