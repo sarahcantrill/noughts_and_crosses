@@ -17,7 +17,7 @@ const winningPositions = [
 ]
 
 function clickSquare(event) {
-    clickedSquare = clickedSquareEvent.target //or event.target
+    clickedSquare = event.target //or event.target
     // //const index = event.target.dataset.index;
     const clickedSquareIndex = Number.parseInt(clickedSquare.getAttribute("data-index"))
 
@@ -50,3 +50,7 @@ function checkResult() {
         document.getElementById("message").textContent = "its a draw";
     }
 }
+
+document.querySelectorAll(".square").forEach(square => {
+    square.addEventListener("click", clickSquare);
+})
