@@ -64,7 +64,17 @@ document.querySelectorAll(".square").forEach(square => {
     square.addEventListener("click", clickSquare);
 })
 
-//
+//reset button
+resetButton.addEventListener("click", () => {
+    let currentPlayer = "X"
+    let gameBoard = ["", "", "", "", "", "", "", "", ""]
+    let gameActive = true
+
+    document.querySelectorAll(".square").forEach(square => {
+        square.textContent = "";
+        square.setAttribute("aria-label", "Empty Square");
+    });
+})
 
 });
 
