@@ -19,7 +19,7 @@ const winningPositions = [
 function clickSquare(event) {
     clickedSquare = clickedSquareEvent.target //or event.target
     // //const index = event.target.dataset.index;
-    const clickedSquareIndex = Number.parseInt(clickedCell.getAttribute("data-index"))
+    const clickedSquareIndex = Number.parseInt(clickedSquare.getAttribute("data-index"))
 
     if (gameBoard[clickedSquareIndex] !== "" || !gameActive){
         return; 
@@ -27,9 +27,21 @@ function clickSquare(event) {
 
     gameBoard[clickedSquareIndex] = currentPlayer
     clickedSquare.textContent = currentPlayer
-    clickedSquare.setAttribute("aria-label", 'Cell ${clickedSquareIndex + 1}, ${currentPlayer}');
+    clickedSquare.setAttribute("aria-label", `Cell ${clickedSquareIndex + 1}, ${currentPlayer}`);
 
     checkResult()
 
     currentPlayer = currentPlayer === "X" ? "O" : "X";
+}
+
+function checkResult() {
+    for (let i = 0; i < winningPositions.length; i++) {
+        const [a, b, c] = winningPositions[i];
+
+        if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c] ) {
+            gameActive = false;
+            document.getElementById("message").textContent = `${gameBoard[a]} wins`;
+            return;
+        }
+    }
 }
