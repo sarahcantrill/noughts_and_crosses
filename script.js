@@ -89,6 +89,8 @@ resetButton.addEventListener("click", () => {
         square.textContent = "";
         square.setAttribute("aria-label", "Empty Square");
     });
+
+    statusDisplay.textContent = `Player ${currentPlayer}'s turn`
 })
 
 updateStatus();
