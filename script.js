@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const board = document.getElementById("board")
 const resetButton = document.getElementById("reset-btn")
 
+const statusDisplay = document.getElementById("status");
+
 let currentPlayer = "X"
 let gameBoard = ["", "", "", "", "", "", "", "", ""]
 let gameActive = true
@@ -17,6 +19,8 @@ const winningPositions = [
     [0, 4, 8],
     [2, 4, 6],
 ]
+
+
 
 //clicking event 
 function clickSquare(event) {
@@ -38,6 +42,7 @@ function clickSquare(event) {
 
     //switch players
     currentPlayer = currentPlayer === "X" ? "O" : "X";
+    updateStatus();
 }
 
 // check if the game state is a win or a draw
@@ -57,12 +62,20 @@ function checkResult() {
         gameActive = false;
         document.getElementById("message").textContent = "its a draw";
     }
+
+   // status.textContent = 'Player ${currentPlayer} Turn'
 }
 
 //call the clicking of the squares
 document.querySelectorAll(".square").forEach(square => {
     square.addEventListener("click", clickSquare);
 })
+
+function updateStatus() {
+    if (gameActive) {
+      statusDisplay.textContent = `Player ${currentPlayer}'s turn`
+    }
+  }
 
 //reset button
 resetButton.addEventListener("click", () => {
@@ -75,6 +88,8 @@ resetButton.addEventListener("click", () => {
         square.setAttribute("aria-label", "Empty Square");
     });
 })
+
+updateStatus();
 
 });
 
