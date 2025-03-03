@@ -1,5 +1,5 @@
 body {
-    padding: 100px;
+    padding-top: 15px;
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -11,6 +11,10 @@ body {
     grid-template-columns: repeat(3, 150px);
     grid-gap: 5px;
     justify-content: center; 
+}
+
+#status {
+    font-size: 30px;
 }
 
 .square {
