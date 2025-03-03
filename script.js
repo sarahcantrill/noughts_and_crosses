@@ -52,7 +52,8 @@ function checkResult() {
 
         if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c] ) {
             gameActive = false; //if there is a player in winning position then the game stops 
-            document.getElementById("message").textContent = `${gameBoard[a]} wins`;
+         //   document.getElementById("message").textContent = `${gameBoard[a]} wins`;
+            statusDisplay.textContent = `Player ${gameBoard[a]} wins!`;
             return;
         }
     }
@@ -60,7 +61,8 @@ function checkResult() {
     //once there is no squares left stop the game
     if(!gameBoard.includes("")) {
         gameActive = false;
-        document.getElementById("message").textContent = "its a draw";
+      //  document.getElementById("message").textContent = "its a draw";
+        statusDisplay.textContent = "It's a draw!";
     }
 
    // status.textContent = 'Player ${currentPlayer} Turn'
