@@ -20,10 +20,13 @@ h1 {
     grid-template-columns: repeat(3, 150px);
     grid-gap: 5px;
     justify-content: center; 
+    background-color: black;
 }
 
 #status {
     font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #score-container {
@@ -33,9 +36,11 @@ h1 {
 
 .square {
     height: 150px;
-    border-radius: 10px;
+    border: none;
     font-size: 100px;
     font-family: 'Arial Rounded MT Bold', sans-serif;
+    background-color: white;
+
 }
 
 .square:hover {
