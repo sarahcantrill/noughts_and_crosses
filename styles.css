@@ -21,6 +21,7 @@ h1 {
     grid-gap: 5px;
     justify-content: center; 
     background-color: black;
+    margin:15px;
 }
 
 #status {
@@ -32,6 +33,7 @@ h1 {
 #score-container {
     display: flex;
     gap: 2rem;
+    font-size: 20px;
 }
 
 .square {
@@ -44,12 +46,12 @@ h1 {
 }
 
 .square:hover {
-    background-color: darkgrey;
+    background-color: lightgrey;
 }
 
 .reset-btn {
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin-top: 10px;
     font-size: 30px;
     background-color: green;
     color: white;
