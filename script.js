@@ -53,6 +53,9 @@ function checkResult() {
         if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c] ) {
             gameActive = false; //if there is a player in winning position then the game stops 
          //   document.getElementById("message").textContent = `${gameBoard[a]} wins`;
+            document.querySelectorAll(".square")[a].classList.add("winning-square");
+            document.querySelectorAll(".square")[b].classList.add("winning-square");
+            document.querySelectorAll(".square")[c].classList.add("winning-square");
             statusDisplay.textContent = `Player ${gameBoard[a]} wins!`;
             return;
         }
