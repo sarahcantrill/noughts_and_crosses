@@ -48,8 +48,8 @@ function clickSquare(event) {
 
 function updateScore(winner) {
     scores[winner]++;
-    document.getElementById("scoreX").textContent = `${scores.X}`;
-    document.getElementById("scoreO").textContent = `${scores.O}`;
+    document.getElementById("scoreX").textContent = `Player X Wins:${scores.X}`;
+    document.getElementById("scoreO").textContent = `Player X Wins:${scores.O}`;
 }
 
 // check if the game state is a win or a draw
