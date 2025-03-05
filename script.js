@@ -91,6 +91,7 @@ resetButton.addEventListener("click", () => {
     document.querySelectorAll(".square").forEach(square => {
         square.textContent = "";
         square.setAttribute("aria-label", "Empty Square");
+        square.classList.remove("winning-square");
     });
 
     statusDisplay.textContent = `Player ${currentPlayer}'s turn`
