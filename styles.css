@@ -43,3 +43,6 @@ body {
     100% {background-color: green;}
 }
 
+.winning-square {
+    animation: winningAnimation 0.5s infinite alternate;
+}
