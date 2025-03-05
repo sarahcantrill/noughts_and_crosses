@@ -36,3 +36,10 @@ body {
     color: white;
     border-radius: 5px;
 }
+
+@keyframes winningAnimation {
+    0% {background-color: green;}
+    50% {background-color: lightgreen;}
+    100% {background-color: green;}
+}
+
