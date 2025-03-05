@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-const board = document.getElementById("board")
-const resetButton = document.getElementById("reset-btn")
+const board = document.getElementById("board");
+const resetButton = document.getElementById("reset-btn");
 
 const statusDisplay = document.getElementById("status");
 
-let currentPlayer = "X"
-let gameBoard = ["", "", "", "", "", "", "", "", ""]
-let gameActive = true
+let currentPlayer = "X";
+let gameBoard = ["", "", "", "", "", "", "", "", ""];
+let gameActive = true;
+let scores = { X: 0, O: 0};
 
 //winning positions
 const winningPositions = [
@@ -45,6 +46,12 @@ function clickSquare(event) {
     updateStatus();
 }
 
+function updateScore(winner) {
+    scores[winner]++;
+    document.getElementById("scoreX").textContent = `${scores.X}`;
+    document.getElementById("scoreO").textContent = `${scores.O}`;
+}
+
 // check if the game state is a win or a draw
 function checkResult() {
     for (let i = 0; i < winningPositions.length; i++) {
@@ -57,6 +64,7 @@ function checkResult() {
             document.querySelectorAll(".square")[b].classList.add("winning-square");
             document.querySelectorAll(".square")[c].classList.add("winning-square");
             statusDisplay.textContent = `Player ${gameBoard[a]} wins!`;
+            updateScore(gameBoard[a])
             return;
         }
     }
