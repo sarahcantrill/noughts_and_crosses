@@ -9,10 +9,8 @@ body {
 
 h1 {
     margin-bottom: 5px;
-    font-size: 25px;
+    font-size: 50px;
     font-family: Verdana, sans-serif;
-
-
 }
 
 .board {
@@ -32,7 +30,7 @@ h1 {
 
 #score-container {
     display: flex;
-    gap: 2rem;
+    gap: 18rem;
     font-size: 20px;
 }
 
