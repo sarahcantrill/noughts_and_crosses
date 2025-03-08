@@ -11,6 +11,8 @@ h1 {
     margin-bottom: 5px;
     font-size: 50px;
     font-family: Verdana, sans-serif;
+    z-index: 1;
+
 }
 
 .board {
@@ -20,18 +22,31 @@ h1 {
     justify-content: center; 
     background-color: black;
     margin:15px;
+    position: relative; /* Ensures the board remains in document flow and can be layered above animation */
+    z-index: 1;
+}
+
+#riveCanvas {
+    display: block;
+  /*  position: absolute;*/
+    position: absolute;
+    z-index: 0;
 }
 
 #status {
     font-size: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
+    z-index: 1;
 }
 
 #score-container {
     display: flex;
+    justify-content: space-between;
     gap: 18rem;
     font-size: 20px;
+    z-index: 1;
+  /*  position: relative;*/
 }
 
 .square {
@@ -54,6 +69,7 @@ h1 {
     background-color: green;
     color: white;
     border-radius: 5px;
+    z-index: 1;
 }
 
 @keyframes winningAnimation {
