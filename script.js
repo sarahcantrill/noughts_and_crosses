@@ -21,7 +21,13 @@ const winningPositions = [
     [2, 4, 6],
 ]
 
+const canvas = document.getElementById('riveCanvas');
 
+  const riveInstance = new rive.Rive({
+    src: 'rocking.riv',
+    canvas: canvas, // canvas element
+    autoplay: true, 
+  });
 
 //clicking event 
 function clickSquare(event) {
