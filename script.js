@@ -35,11 +35,12 @@ function clickSquare(event) {
     }
 
     //update square w players symbol
-    gameBoard[clickedSquareIndex] = currentPlayer
-    clickedSquare.textContent = currentPlayer
+    gameBoard[clickedSquareIndex] = currentPlayer;
+    clickedSquare.textContent = currentPlayer;
+    clickedSquare.classList.add(currentPlayer); //makes an x and o class
     clickedSquare.setAttribute("aria-label", `Cell ${clickedSquareIndex + 1}, ${currentPlayer}`);
 
-    checkResult()
+    checkResult();
 
     //switch players
     currentPlayer = currentPlayer === "X" ? "O" : "X";

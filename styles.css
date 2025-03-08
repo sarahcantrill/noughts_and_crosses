@@ -65,3 +65,11 @@ h1 {
 .winning-square {
     animation: winningAnimation 0.5s infinite alternate;
 }
+
+.X {
+    color: blue;
+}
+
+.O {
+    color: red;
+}
