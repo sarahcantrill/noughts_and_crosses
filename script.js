@@ -81,9 +81,15 @@ function checkResult() {
         gameActive = false;
       //  document.getElementById("message").textContent = "its a draw";
         statusDisplay.textContent = "It's a draw!";
-    }
+    
 
    // status.textContent = 'Player ${currentPlayer} Turn'
+   document.querySelectorAll(".square").forEach(square => {
+    square.classList.add("drawing-square");
+
+});
+    }
+
 }
 
 //call the clicking of the squares
@@ -106,7 +112,7 @@ resetButton.addEventListener("click", () => {
     document.querySelectorAll(".square").forEach(square => {
         square.textContent = "";
         square.setAttribute("aria-label", "Empty Square");
-        square.classList.remove("X", "O", "winning-square");
+        square.classList.remove("X", "O", "winning-square", "drawing-square");
     });
 
     statusDisplay.textContent = `Player ${currentPlayer}'s turn`
@@ -115,4 +121,5 @@ resetButton.addEventListener("click", () => {
 updateStatus();
 
 });
+
 

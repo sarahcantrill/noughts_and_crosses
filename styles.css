@@ -82,6 +82,16 @@ h1 {
     animation: winningAnimation 0.5s infinite alternate;
 }
 
+@keyframes drawAnimation {
+    0% {background-color: white;}
+    50% {background-color: yellow;}
+    100% {background-color: white;}
+}
+
+.drawing-square {
+    animation: drawAnimation 0.5s infinite alternate;
+}
+
 .X {
     color: blue;
 }
