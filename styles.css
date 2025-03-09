@@ -32,8 +32,8 @@ h1 {
   /*  position: absolute;*/
     position: absolute;
     margin-top: 40px;
-    width: 90%;
-    height: 90%;
+    width: 1300px;
+    height: 1450px;
     z-index: 0;
 }
 
