@@ -5,6 +5,7 @@ body {
     align-items: center; 
     justify-content: center;
     font-family: Verdana, sans-serif;
+    background: linear-gradient(to right, #003366, #f32e2e);
 }
 
 h1 {
@@ -30,6 +31,9 @@ h1 {
     display: block;
   /*  position: absolute;*/
     position: absolute;
+    margin-top: 40px;
+    width: 1300px;
+    height: 1050px;
     z-index: 0;
 }
 
